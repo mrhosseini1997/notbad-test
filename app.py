@@ -6,7 +6,7 @@ def hello():
     if request.method == 'POST' and request.headers['NotBad'] == "true":
        return "RealyNotBad"
     if request.method == 'GET':
-       return "Only POST Method allowed!"
+       return "Only POST Method allowed! - test"
        
 if __name__ == "__main__":
     app.run(debug=True)
