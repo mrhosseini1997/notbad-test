@@ -1,0 +1,31 @@
+[
+    {
+        "name": "notbad-webservice",
+        "image": "${CONTAINER_IMAGE}", 
+        "cpu": 256,
+        "memory": 256,
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+              "awslogs-group": "notbad-webservice",
+              "awslogs-create-group": "true",
+              "awslogs-region": "us-east-1",
+              "awslogs-stream-prefix": "ecs"
+            }
+          },
+        "links": [],
+        "portMappings": [
+            { 
+                "hostPort": 0,
+                "containerPort": 8089,
+                "protocol": "tcp"
+            }
+        ],
+        "essential": true,
+        "entryPoint": [],
+        "command": [],
+        "environment": [],
+        "mountPoints": [],
+        "volumesFrom": []
+    }
+  ]
